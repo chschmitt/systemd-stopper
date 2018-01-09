@@ -10,7 +10,6 @@ def main():
 
     logging.info('PID: %d', os.getpid())
     stopper = systemd_stopper.install().ignore('HUP')
-    # stopper = systemd_stopper.install().ignore('HUP')
 
     i = 0
     while stopper.run:
